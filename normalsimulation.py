@@ -47,6 +47,7 @@ def main():
             b = random.random() # Probability for balk
             # Look into each customer in the queue
             for j in range(q_size):
+                # A customer balks
                 if b < balk_chance:
                     q.get()
                     q_size -= 1
@@ -58,7 +59,7 @@ def main():
         print(f'Queue length distribution: {q_length_arr}')
         print(f'Number of customers served: {customers_served}')
 
-    for i in range(10):
+    for i in range(30):
         simulate()
 
 if __name__ == "__main__":
